@@ -1,0 +1,14 @@
+{
+  "input_rows": 125855,
+  "dropped_invalid_identity": 1,
+  "dropped_duplicate_id": 0,
+  "unknown_price": 0,
+  "unknown_date": 0,
+  "unknown_genre": 8422,
+  "output_rows": 125854,
+  "source_file": "games.csv",
+  "source_sha256": "1b48008b01a799d82385d6e66ba0cb65dd477b6aa4b6c2ec8c443025ab6880ad",
+  "imported_at": "2026-09-13T17:28:40.594889+00:00",
+  "demo": false,
+  "source_url": "https://www.kaggle.com/datasets/fronkongames/steam-games-dataset"
+}
