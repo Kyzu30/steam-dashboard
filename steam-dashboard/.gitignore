@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+ngrok.yml
+ngrok.yaml
+data/raw/*.csv
+data/*.db
+data/*.csv
+data/cleaning_report.json
+.DS_Store

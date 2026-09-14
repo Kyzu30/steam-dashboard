@@ -1,0 +1,9 @@
+
+.venv/
+__pycache__/
+*.pyc
+*.csv
+*.db
+.env
+ngrok.yml
+ngrok.yaml
