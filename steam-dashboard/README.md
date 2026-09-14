@@ -38,8 +38,6 @@ Steam Atlas là ứng dụng web giúp người dùng tra cứu và khám phá d
 - Số dòng trước xử lý: 125855
 - Số dòng sau xử lý: 125854
 
-Dataset chứa thông tin về các trò chơi trên Steam. Dữ liệu phản ánh thời điểm thu thập của nguồn, không cập nhật trực tiếp theo cửa hàng Steam.
-
 ### 2.2. Các trường được sử dụng
 
 | Trường CSV | Ý nghĩa | Mục đích sử dụng |
@@ -224,13 +222,13 @@ CSV gốc, database và môi trường ảo không đưa lên GitHub. Người t
 
 | Công nghệ/thư viện | Phiên bản | Vai trò |
 |---|---|---|
-| Python | [Điền phiên bản đang dùng] | Ngôn ngữ phía server |
+| Python | 3.9.13 | Ngôn ngữ phía server |
 | Flask | 3.1.2 | Xây dựng API |
 | flask-cors | 6.0.1 | Cấu hình CORS |
 | waitress | 3.0.2 | Chạy ứng dụng Flask |
 | Chart.js | 4.4.8 | Vẽ biểu đồ |
-| Git | [Điền kết quả git --version] | Quản lý phiên bản |
-| Ngrok | [Điền kết quả ngrok version] | Chia sẻ website qua HTTPS |
+| Git |  2.55.0.windows.5 | Quản lý phiên bản |
+| Ngrok | 3.39.9 | Chia sẻ website qua HTTPS |
 
 Các thư viện chuẩn như `csv`, `sqlite3`, `json`, `pathlib`, `datetime`, `hashlib`, `argparse`, `math` và `io` đi kèm Python, không cần cài riêng.
 
@@ -316,55 +314,6 @@ Sao chép địa chỉ HTTPS tại dòng Forwarding để truy cập và chia s�
 
 Khi tắt máy, dừng server hoặc dừng Ngrok, website sẽ không còn phục vụ qua đường hầm đó.
 
-## 11. Hình ảnh sản phẩm
 
-### Trang tổng quan
 
-![Trang tổng quan Steam Atlas](screenshots/dashboard.png)
 
-### Kết quả sau khi áp dụng bộ lọc
-
-![Kết quả lọc game](screenshots/filtered.png)
-
-## 12. Kiểm tra chức năng
-
-Thực hiện các kiểm tra sau trước khi nộp:
-
-- Trang tải được dữ liệu Steam thật.
-- Tìm kiếm và bộ lọc trả kết quả phù hợp.
-- Tổng số game của bảng và API thống kê khớp nhau.
-- Chuyển trang không làm thay đổi thống kê toàn bộ kết quả lọc.
-- Tìm tên không tồn tại hiển thị trạng thái rỗng.
-- Tham số giá âm trả HTTP 400.
-- Có thể ẩn/hiện dữ liệu trên biểu đồ và tải PNG.
-- Link Ngrok mở được từ một thiết bị khác.
-
-## 13. Cập nhật code lên GitHub
-
-Sau khi chỉnh sửa và lưu các file:
-
-```powershell
-git add .
-git status
-git commit -m "Update project documentation"
-git push
-```
-
-Kiểm tra danh sách file trước khi commit để tránh đưa dataset lớn hoặc thông tin riêng lên repository.
-
-## 14. Hạn chế và hướng phát triển
-
-### Hạn chế
-
-- Dữ liệu là snapshot, chưa tự động cập nhật.
-- Tìm kiếm hiện dựa trên chuỗi tên, chưa có tìm kiếm gần đúng.
-- Việc chia sẻ bằng Ngrok phụ thuộc máy chủ đang hoạt động.
-- Chart.js tải qua CDN nên cần kết nối Internet.
-
-### Hướng phát triển
-
-- Bổ sung trang chi tiết game.
-- Hiển thị ảnh và thông tin đánh giá.
-- Bổ sung so sánh game.
-- Tự động cập nhật dữ liệu theo lịch.
-- Triển khai trên máy chủ hoạt động liên tục.
